@@ -15,7 +15,7 @@
     "pino-pretty": "^9.1.1"
   },
   "scripts": {
-    "test": "dotenv -e .test.env -- jest",
+    "test": "echo 'test'",
     "dev": "dotenv -e .local.env -- node index.js | pino-pretty",
     "lint": "echo 'lint'",
     "prepare": "husky install"
