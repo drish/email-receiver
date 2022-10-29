@@ -17,6 +17,7 @@
   "scripts": {
     "test": "echo 'test'",
     "dev": "dotenv -e .local.env -- node index.js | pino-pretty",
+    "start": "node index.js",
     "lint": "echo 'lint'",
     "prepare": "husky install"
   },
