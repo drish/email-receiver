@@ -4,6 +4,7 @@ const port = Number(process.env.PORT) || DEFAULT_PORT;
 
 const { Client } = require('@notionhq/client');
 const dotenv = require('dotenv');
+const cors = require('cors');
 const express = require('express');
 const expressPino = require("express-pino-logger");
 const logger = require("./logger");
@@ -30,6 +31,9 @@ async function createServer() {
 
   app.use(express.json());
   app.use(logRequest);
+  app.use(cors({
+    origin: '*'
+  }));
 
   app.post("/", async (req, res, next) => {
 
